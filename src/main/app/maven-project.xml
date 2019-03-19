@@ -41,6 +41,10 @@ http://www.mulesoft.org/schema/mule/ee/dw http://www.mulesoft.org/schema/mule/ee
 %output application/json
 ---
 payload]]></dw:set-payload>
+            <dw:set-property propertyName="Content-Type"><![CDATA[%dw 1.0
+%output application/java
+---
+'application/json']]></dw:set-property>
         </dw:transform-message>
     </flow>
 </mule>
